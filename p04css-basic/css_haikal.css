@@ -1,0 +1,73 @@
+body{
+	font-family: sans-serif;
+}
+
+.petunjuk{
+	margin: 0px 0px 0px 1rem;
+    font-size: 25px;
+    color: red;
+}
+
+ol{
+	color: red;
+}
+
+legend{
+	color: red;
+}
+
+select:hover {
+  background-color: lightblue;
+}
+
+option:hover {
+  background-color: lightblue;
+}
+
+input:hover {
+  background-color: lightblue;
+}
+
+textarea:hover {
+  background-color: lightblue;
+}
+
+.mid{
+	text-align: center;
+}
+.green{
+	    font-family: 'Prompt', sans-serif;
+        font-weight: bold;
+        background-color: red;
+        color: white;
+        padding: 5px 7px;
+        border: none;
+        width: 100px;
+        line-height: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.5s;
+}
+.green:hover{
+	transform: scale(1.1);
+}
+
+.red{
+	    font-family: 'Prompt', sans-serif;
+        font-weight: bold;
+        background-color: green;
+        color: white;
+        padding: 5px 7px;
+        border: none;
+        width: 100px;
+        line-height: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.5s;
+}
+
+.red:hover{
+	transform: scale(1.1);
+}
