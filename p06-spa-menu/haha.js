@@ -1,24 +1,25 @@
-$(document).ready(function () {
-  var currentSection = 0;
-  $("#konten").hide();
-  $("ul li a").click(function () {
-    $("ul li a").removeClass("active");
-    $(this).addClass("active");
+$(document).ready(function() {
+    $("nav ul li a").click(function(){
+        $(".isi").slideToggle("slow");
 
-    var href = $(this).attr("href");
-    $("#isikonten>div").hide();
-
-    $(href).show();
-
-    if (currentSection == 0) {
-      $("#konten").slideToggle(200);
-      currentSection = href;
-    } else if (currentSection == href) {
-      $("#konten").slideToggle(200);
-      currentSection = 0;
-    } else {
-      currentSection = href;
-    }
-    return false;
+  $('nav ul li.inactive').each(function(index, el) {
+    var isiID = el.id.split('-')[1];
+    $('.isi#' + isiID).hide();
   });
+});
+
+$('nav').delegate('.inactive', 'click', function(event) {
+  var pilihIsi = this.id.split('-')[1];
+  console.log(pilihIsi);
+  document.location.hash = pilihIsi;
+
+  $('.isi:visible').fadeOut('slow', function() {
+    $('.isi#' + pilihIsi).fadeIn('slow');
+  });
+
+  var $this = $(this);
+  $this.removeClass('inactive').addClass("active");
+    $this.siblings().addClass('inactive').removeClass('active');
+
+    });
 });
